@@ -1,0 +1,26 @@
+1. lo que yo entiendo y mi breve conclusio sobre el codigo es que 
+
+fib_memo: aprovecha caché (programación dinámica), reduciendo drásticamente el tiempo.
+
+fib_iter: usa un ciclo y casi nada de memoria, siendo la versión más eficiente.
+
+2. La complejidad importa.
+
+Recursivo simple → crece exponencialmente (≈ O(2ⁿ)), imposible de usar con valores grandes.
+
+Con memoización → baja a O(n).
+
+Iterativo → también O(n), pero con menor consumo de memoria y mejor rendimiento.
+
+3. Las mediciones muestran la diferencia real.
+
+Se midió tiempo con time.perf_counter() y memoria con tracemalloc.
+
+El recursivo explota rápido en tiempo y memoria, mientras que memoización e iterativo mantienen tiempos bajos incluso con n mayores.
+
+4. Visualización de resultados.
+
+Se usan gráficas (Plotly) para ver cómo cambia el rendimiento según aumenta n, reforzando que la elección del algoritmo correcto es clave.
+
+Conclusión general:
+Este código demuestra que no basta con que un algoritmo funcione, sino que es fundamental analizar su eficiencia en tiempo y memoria. Para el problema de Fibonacci, la mejor opción práctica es la implementación iterativa, ya que combina simplicidad, rapidez y bajo consumo de recursos.
